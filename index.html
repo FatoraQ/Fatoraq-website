@@ -25,6 +25,29 @@ body {
   margin: 0;
   background: var(--bg-dark);
   color: var(--text-light);
+  overflow-x: hidden;
+}
+
+/* ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.fade-up.delay {
+  animation-delay: 0.3s;
+}
+
+.fade-up.delay2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* HERO */
@@ -38,23 +61,42 @@ body {
   padding: 40px 20px;
 }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
+.hero-content {
+  max-width: 700px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
   color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.logo span {
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.hero h1 {
+  font-size: 22px;
+  margin: 10px 0 20px;
+  color: #ddd;
+  font-weight: 400;
 }
 
 .hero p {
-  font-size: 20px;
-  color: #ddd;
+  font-size: 18px;
+  color: #ccc;
   max-width: 600px;
   margin: auto;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 30px;
-  padding: 16px 36px;
+  margin-top: 35px;
+  padding: 16px 38px;
   background: var(--gold);
   color: #000;
   text-decoration: none;
@@ -70,7 +112,7 @@ body {
 
 /* SECTIONS */
 section {
-  padding: 80px 20px;
+  padding: 90px 20px;
   background: var(--bg-light);
   color: var(--text-dark);
   text-align: center;
@@ -148,11 +190,20 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-  <div>
-    <h1>FatoraQ</h1>
-    <p>منصة سعودية فاخرة لإدارة الفواتير والاشتراكات باحترافية وذكاء</p>
-    <a class="btn" href="https://api.whatsapp.com/send?phone=966538126669&text=مرحبا،%20حاب%20أعرف%20أكثر%20عن%20FatoraQ">
-      ابدأ مجاناً
+  <div class="hero-content">
+    <div class="logo fade-up">Fatora<span>Q</span></div>
+
+    <h1 class="fade-up delay">
+      منصة سعودية فاخرة لإدارة الفواتير والاشتراكات
+    </h1>
+
+    <p class="fade-up delay2">
+      نظّم دخلك، راقب التزاماتك، وخلّ الإدارة تصير أسهل من أي وقت.
+    </p>
+
+    <a class="btn fade-up delay2"
+       href="https://api.whatsapp.com/send?phone=966538126669&text=مرحبا،%20حاب%20أعرف%20أكثر%20عن%20FatoraQ">
+       ابدأ مجاناً
     </a>
   </div>
 </div>
@@ -161,45 +212,36 @@ footer {
 <section>
   <h2>ليش FatoraQ؟</h2>
   <p>
-    لأن وقتك أغلى من أنك تضيعَه في الفواتير.
-    FatoraQ ينظم لك كل شيء، يخليك مركز على نمو مشروعك بثقة.
+    لأن الاحتراف يبدأ من التنظيم.
+    FatoraQ صُمم لرواد الأعمال اللي يبغون سيطرة كاملة بدون تعقيد.
   </p>
 
   <div class="features">
     <div class="card">
       <h3>إدارة ذكية</h3>
-      <p>رتّب فواتيرك واشتراكاتك في مكان واحد بكل بساطة.</p>
+      <p>كل فواتيرك واشتراكاتك في مكان واحد.</p>
     </div>
 
     <div class="card">
       <h3>تنبيهات تلقائية</h3>
-      <p>ما عاد تنسى موعد سداد ولا اشتراك.</p>
+      <p>لا تفوّت أي موعد سداد.</p>
     </div>
 
     <div class="card">
-      <h3>مناسب للجميع</h3>
-      <p>أفراد، رواد أعمال، متاجر، شركات ناشئة.</p>
+      <h3>مظهر احترافي</h3>
+      <p>واجهة فخمة تليق بمشروعك.</p>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- HOW -->
 <section style="background:#f0f0f0">
   <h2>كيف يعمل؟</h2>
 
   <div class="steps">
-    <div class="step">
-      <span>1</span>
-      سجل معنا
-    </div>
-    <div class="step">
-      <span>2</span>
-      أضف فواتيرك
-    </div>
-    <div class="step">
-      <span>3</span>
-      خلك مرتاح
-    </div>
+    <div class="step"><span>1</span>سجّل</div>
+    <div class="step"><span>2</span>أضف فواتيرك</div>
+    <div class="step"><span>3</span>ارتاح</div>
   </div>
 
   <a class="btn" style="margin-top:50px"
