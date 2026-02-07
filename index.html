@@ -2,10 +2,17 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>FatoraQ | منصة الفواتير الذكية</title>
+  <title>FatoraQ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    :root {
+      --main: #0d6efd;
+      --dark: #0a3d91;
+      --light: #f5f7fb;
+      --text: #1f2937;
+    }
+
     * {
       box-sizing: border-box;
       font-family: system-ui, -apple-system, BlinkMacSystemFont;
@@ -13,72 +20,92 @@
 
     body {
       margin: 0;
-      background: #f7f9fc;
-      color: #222;
+      background: var(--light);
+      color: var(--text);
       line-height: 1.8;
+      transition: 0.3s;
     }
 
     header {
-      background: linear-gradient(135deg, #0d6efd, #0b5ed7);
-      color: white;
-      padding: 80px 20px;
+      background: linear-gradient(135deg, var(--main), var(--dark));
+      color: #fff;
+      padding: 90px 20px;
       text-align: center;
+      position: relative;
     }
 
-    header h1 {
-      font-size: 40px;
+    .lang-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 48px;
       margin-bottom: 10px;
     }
 
-    header p {
-      font-size: 20px;
-      opacity: 0.95;
+    p {
+      font-size: 18px;
     }
 
     .btn {
       display: inline-block;
       margin-top: 30px;
       padding: 16px 36px;
-      background: white;
-      color: #0d6efd;
+      background: #fff;
+      color: var(--main);
       text-decoration: none;
-      border-radius: 12px;
       font-size: 18px;
-      font-weight: bold;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #f1f1f1;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 900px;
+      padding: 80px 20px;
+      max-width: 1100px;
       margin: auto;
       text-align: center;
     }
 
-    h2 {
-      font-size: 28px;
+    section h2 {
+      font-size: 34px;
       margin-bottom: 20px;
     }
 
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 50px;
     }
 
     .card {
-      background: white;
+      background: #fff;
       padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     }
 
     footer {
-      background: #eef1f6;
+      background: #eaeaea;
+      padding: 30px;
       text-align: center;
-      padding: 20px;
       font-size: 14px;
-      color: #555;
+      color: #666;
     }
   </style>
 </head>
@@ -86,56 +113,87 @@
 <body>
 
 <header>
-  <h1>FatoraQ</h1>
-  <p>منصة سعودية ذكية لإدارة الفواتير والاشتراكات بسهولة</p>
-  <a href="https://wa.me/966538126669" class=
-<a
-  class="btn"
-  href="https://wa.me/966538126669?text=مرحبا، حاب أستخدم FatoraQ"
-  target="_blank"
->
-ابدأ مجاناً
-</a>
+  <button class="lang-btn" onclick="toggleLang()">EN</button>
+
+  <h1 id="title">FatoraQ</h1>
+  <p id="subtitle">منصة سعودية ذكية لإدارة الفواتير والاشتراكات بسهولة</p>
+
+  <a
+    id="cta"
+    class="btn"
+    href="https://wa.me/966538126669?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D8%A3%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%20FatoraQ"
+    target="_blank"
+  >
+    ابدأ مجاناً
+  </a>
 </header>
 
 <section>
-  <h2>ليش FatoraQ؟</h2>
-  <p>
-    نسهل عليك إدارة الفواتير، نتابع اشتراكاتك، ونخليك مركز على شغلك  
-    بدون تعقيد أو صداع محاسبة.
+  <h2 id="whyTitle">ليش FatoraQ؟</h2>
+  <p id="whyText">
+    نسهّل عليك إدارة الفواتير، نتابع اشتراكاتك،
+    ونخليك مركز على شغلك بدون تعقيد.
   </p>
 </section>
 
 <section>
-  <h2>المميزات</h2>
+  <h2 id="featuresTitle">المميزات</h2>
 
   <div class="features">
     <div class="card">
-      <h3>إدارة ذكية</h3>
-      <p>رتّب فواتيرك واشتراكاتك في مكان واحد.</p>
+      <h3 id="f1t">إدارة ذكية</h3>
+      <p id="f1d">رتّب فواتيرك واشتراكاتك في مكان واحد.</p>
     </div>
 
     <div class="card">
-      <h3>تنبيهات تلقائية</h3>
-      <p>ما عاد تنسى موعد سداد أو اشتراك.</p>
+      <h3 id="f2t">تنبيهات تلقائية</h3>
+      <p id="f2d">نذكرك قبل مواعيد الدفع.</p>
     </div>
 
     <div class="card">
-      <h3>مناسبة للجميع</h3>
-      <p>للمشاريع، المستقلين، والمتاجر.</p>
+      <h3 id="f3t">مناسب للجميع</h3>
+      <p id="f3d">للمستقلين والمتاجر وأصحاب المشاريع.</p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>جاهز تبدأ؟</h2>
-  <p>خلّ إدارة الفواتير علينا وركز على نمو مشروعك.</p>
-  <a href="https://wa.me/9665XXXXXXXX" class="btn">تواصل معنا</a>
-</section>
-
-<footer>
-  © 2026 FatoraQ – جميع الحقوق محفوظة
+<footer id="footerText">
+  © 2026 FatoraQ — جميع الحقوق محفوظة
 </footer>
+
+<script>
+  let lang = "ar";
+
+  function toggleLang() {
+    if (lang === "ar") {
+      lang = "en";
+      document.documentElement.lang = "en";
+      document.documentElement.dir = "ltr";
+
+      title.textContent = "FatoraQ";
+      subtitle.textContent = "A smart Saudi platform for managing invoices and subscriptions";
+      cta.textContent = "Start Free";
+      whyTitle.textContent = "Why FatoraQ?";
+      whyText.textContent = "We help you manage invoices and subscriptions so you can focus on your business.";
+      featuresTitle.textContent = "Features";
+
+      f1t.textContent = "Smart Management";
+      f1d.textContent = "All your invoices and subscriptions in one place.";
+
+      f2t.textContent = "Auto Reminders";
+      f2d.textContent = "Never miss a payment again.";
+
+      f3t.textContent = "For Everyone";
+      f3d.textContent = "Perfect for freelancers and small businesses.";
+
+      footerText.textContent = "© 2026 FatoraQ — All rights reserved";
+
+      document.querySelector(".lang-btn").textContent = "AR";
+    } else {
+      location.reload();
+    }
+  }
+</script>
 
 </body>
 </html>
