@@ -1,199 +1,216 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>FatoraQ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>FatoraQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --main: #0d6efd;
-      --dark: #0a3d91;
-      --light: #f5f7fb;
-      --text: #1f2937;
-    }
+<style>
+:root {
+  --bg-dark: #0f0f0f;
+  --bg-light: #f6f6f6;
+  --gold: #c9a24d;
+  --gold-soft: #e6c97a;
+  --text-dark: #111;
+  --text-light: #fff;
+  --gray: #999;
+}
 
-    * {
-      box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont;
-    }
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
 
-    body {
-      margin: 0;
-      background: var(--light);
-      color: var(--text);
-      line-height: 1.8;
-      transition: 0.3s;
-    }
+body {
+  margin: 0;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
 
-    header {
-      background: linear-gradient(135deg, var(--main), var(--dark));
-      color: #fff;
-      padding: 90px 20px;
-      text-align: center;
-      position: relative;
-    }
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    .lang-btn {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: rgba(255,255,255,0.2);
-      border: none;
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: var(--gold);
+}
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+.hero p {
+  font-size: 20px;
+  color: #ddd;
+  max-width: 600px;
+  margin: auto;
+}
 
-    p {
-      font-size: 18px;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 16px 36px;
+  background: var(--gold);
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 40px;
+  transition: 0.3s ease;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 16px 36px;
-      background: #fff;
-      color: var(--main);
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 12px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+.btn:hover {
+  background: var(--gold-soft);
+  transform: translateY(-3px);
+}
 
-    .btn:hover {
-      transform: translateY(-2px);
-      background: #f1f1f1;
-    }
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  text-align: center;
+}
 
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
-      text-align: center;
-    }
+section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
 
-    section h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
-    }
+section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  color: #444;
+}
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 50px;
-    }
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
 
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
 
-    footer {
-      background: #eaeaea;
-      padding: 30px;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+
+/* HOW IT WORKS */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.step {
+  background: #111;
+  color: white;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.step span {
+  display: block;
+  font-size: 40px;
+  color: var(--gold);
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: var(--gray);
+  padding: 30px;
+  text-align: center;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <button class="lang-btn" onclick="toggleLang()">EN</button>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>FatoraQ</h1>
+    <p>منصة سعودية فاخرة لإدارة الفواتير والاشتراكات باحترافية وذكاء</p>
+    <a class="btn" href="https://api.whatsapp.com/send?phone=966538126669&text=مرحبا،%20حاب%20أعرف%20أكثر%20عن%20FatoraQ">
+      ابدأ مجاناً
+    </a>
+  </div>
+</div>
 
-  <h1 id="title">FatoraQ</h1>
-  <p id="subtitle">منصة سعودية ذكية لإدارة الفواتير والاشتراكات بسهولة</p>
-
-  <a
-    id="cta"
-    class="btn"
-    href="https://wa.me/966538126669?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%AD%D8%A7%D8%A8%20%D8%A3%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%20FatoraQ"
-    target="_blank"
-  >
-    ابدأ مجاناً
-  </a>
-</header>
-
+<!-- WHY -->
 <section>
-  <h2 id="whyTitle">ليش FatoraQ؟</h2>
-  <p id="whyText">
-    نسهّل عليك إدارة الفواتير، نتابع اشتراكاتك،
-    ونخليك مركز على شغلك بدون تعقيد.
+  <h2>ليش FatoraQ؟</h2>
+  <p>
+    لأن وقتك أغلى من أنك تضيعَه في الفواتير.
+    FatoraQ ينظم لك كل شيء، يخليك مركز على نمو مشروعك بثقة.
   </p>
-</section>
-
-<section>
-  <h2 id="featuresTitle">المميزات</h2>
 
   <div class="features">
     <div class="card">
-      <h3 id="f1t">إدارة ذكية</h3>
-      <p id="f1d">رتّب فواتيرك واشتراكاتك في مكان واحد.</p>
+      <h3>إدارة ذكية</h3>
+      <p>رتّب فواتيرك واشتراكاتك في مكان واحد بكل بساطة.</p>
     </div>
 
     <div class="card">
-      <h3 id="f2t">تنبيهات تلقائية</h3>
-      <p id="f2d">نذكرك قبل مواعيد الدفع.</p>
+      <h3>تنبيهات تلقائية</h3>
+      <p>ما عاد تنسى موعد سداد ولا اشتراك.</p>
     </div>
 
     <div class="card">
-      <h3 id="f3t">مناسب للجميع</h3>
-      <p id="f3d">للمستقلين والمتاجر وأصحاب المشاريع.</p>
+      <h3>مناسب للجميع</h3>
+      <p>أفراد، رواد أعمال، متاجر، شركات ناشئة.</p>
     </div>
   </div>
 </section>
 
-<footer id="footerText">
-  © 2026 FatoraQ — جميع الحقوق محفوظة
+<!-- HOW IT WORKS -->
+<section style="background:#f0f0f0">
+  <h2>كيف يعمل؟</h2>
+
+  <div class="steps">
+    <div class="step">
+      <span>1</span>
+      سجل معنا
+    </div>
+    <div class="step">
+      <span>2</span>
+      أضف فواتيرك
+    </div>
+    <div class="step">
+      <span>3</span>
+      خلك مرتاح
+    </div>
+  </div>
+
+  <a class="btn" style="margin-top:50px"
+     href="https://api.whatsapp.com/send?phone=966538126669&text=أبغى%20أبدأ%20مع%20FatoraQ">
+     تواصل معنا
+  </a>
+</section>
+
+<footer>
+© 2026 FatoraQ – جميع الحقوق محفوظة
 </footer>
-
-<script>
-  let lang = "ar";
-
-  function toggleLang() {
-    if (lang === "ar") {
-      lang = "en";
-      document.documentElement.lang = "en";
-      document.documentElement.dir = "ltr";
-
-      title.textContent = "FatoraQ";
-      subtitle.textContent = "A smart Saudi platform for managing invoices and subscriptions";
-      cta.textContent = "Start Free";
-      whyTitle.textContent = "Why FatoraQ?";
-      whyText.textContent = "We help you manage invoices and subscriptions so you can focus on your business.";
-      featuresTitle.textContent = "Features";
-
-      f1t.textContent = "Smart Management";
-      f1d.textContent = "All your invoices and subscriptions in one place.";
-
-      f2t.textContent = "Auto Reminders";
-      f2d.textContent = "Never miss a payment again.";
-
-      f3t.textContent = "For Everyone";
-      f3d.textContent = "Perfect for freelancers and small businesses.";
-
-      footerText.textContent = "© 2026 FatoraQ — All rights reserved";
-
-      document.querySelector(".lang-btn").textContent = "AR";
-    } else {
-      location.reload();
-    }
-  }
-</script>
 
 </body>
 </html>
