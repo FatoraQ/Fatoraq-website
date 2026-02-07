@@ -2,57 +2,63 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>فاتورتك | FatoraQ</title>
+  <title>FatoraQ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont;
-      background: #0f172a;
-      color: #fff;
+      margin: 0;
+      background: #f7f7f7;
+      color: #222;
       text-align: center;
     }
     header {
+      background: #0d6efd;
+      color: white;
+      padding: 60px 20px;
+    }
+    section {
       padding: 40px 20px;
-    }
-    .logo {
-      width: 120px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-    p {
-      color: #cbd5e1;
-      font-size: 1.1rem;
     }
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 14px 28px;
-      background: #22c55e;
-      color: #000;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: #0d6efd;
+      color: white;
       text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
+      border-radius: 8px;
+      font-size: 18px;
     }
     footer {
-      margin-top: 60px;
+      background: #eee;
       padding: 20px;
-      font-size: 0.9rem;
-      color: #94a3b8;
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <img src="logo.png" alt="FatoraQ Logo" class="logo">
-  <h1>فاتورتك</h1>
-  <p>نظام فواتير ذكي، بسيط، وسعودي 🇸🇦</p>
-  <a href="#" class="btn">قريباً</a>
+  <h1>FatoraQ</h1>
+  <p>منصة ذكية لإدارة الفواتير والاشتراكات بسهولة</p>
+  <a href="#" class="btn">ابدأ الآن</a>
 </header>
+
+<section>
+  <h2>ليش FatoraQ؟</h2>
+  <p>
+    ننظم فواتيرك، نتابع اشتراكاتك، ونخليك مركز على شغلك  
+    بدون تعقيد أو صداع محاسبة.
+  </p>
+</section>
+
+<section>
+  <h2>مناسبة لـ</h2>
+  <p>أصحاب المشاريع · المتاجر · المستقلين · الشركات الناشئة</p>
+</section>
 
 <footer>
   © 2026 FatoraQ – جميع الحقوق محفوظة
